@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MemberServiceImpl implements MemberService{
-    private  MemberRepository memberRepository;
+
+    private final MemberRepository memberRepository;
 
     @Autowired //  @Autowired는 마치 ac.getBean(MemberRepository.class)
     public MemberServiceImpl(MemberRepository memberRepository) {
@@ -23,7 +24,7 @@ public class MemberServiceImpl implements MemberService{
     }
 
     // 테스트 용
-    public MemberRepository getMemberRepository(){
-        return memberRepository;
+     public MemberRepository getMemberRepository(){
+     return memberRepository;
     }
 }
